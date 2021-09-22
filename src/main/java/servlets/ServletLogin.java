@@ -26,14 +26,13 @@ public class ServletLogin extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	}
-
 	
 	/*recebe os dados enviados por um formulario*/
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
-		String url = request.getParameter("url");
+		
 		
 		
 		if (login != null && !login.isEmpty() && senha != null && !senha.isEmpty()) {
