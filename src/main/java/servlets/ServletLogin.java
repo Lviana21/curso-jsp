@@ -45,17 +45,11 @@ public class ServletLogin extends HttpServlet {
 			if (modelLogin.getLogin().equals("admin") 
 					&& modelLogin.getSenha().equals("admin")) {/*Deu certo o  login*/
 				
-				request.getSession().setAttribute("usuario", modelLogin);/*Coloca o user na sessao*/
 				
-				if (url == null || url.equals("null")) {
-					url = "principal/principal.jsp";
-				}
-				RequestDispatcher redirecionar = request.getRequestDispatcher(url);
-				redirecionar.forward(request, response);
 				
 			}else {
 				RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
-				request.setAttribute("msg", "Informe o login e senha corretamente!");
+				request.setAttribute("msg", "Informe o login e senha corretamente2!");
 				redirecionar.forward(request, response);
 			}
 			
