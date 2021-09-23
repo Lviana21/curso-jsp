@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Área central do sistema</h1>
+<h1>Tela principal após login</h1>
 
 </body>
 </html>
