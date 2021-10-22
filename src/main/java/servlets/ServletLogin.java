@@ -39,9 +39,7 @@ public class ServletLogin extends HttpServlet {
 			ModelLogin modelLogin = new ModelLogin();
 			modelLogin.setLogin(login);
 			modelLogin.setSenha(senha);
-			
-			
-			
+						
 			if (modelLogin.getLogin().equals("admin") 
 					&& modelLogin.getSenha().equals("admin")) {/*Deu certo o login*/
 				
