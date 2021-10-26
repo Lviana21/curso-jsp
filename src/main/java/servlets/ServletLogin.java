@@ -12,7 +12,7 @@ import model.ModelLogin;
 
 
 /*O chamando Controller são as servlets ou ServletLoginController*/
-@WebServlet(urlPatterns = {"/ServletLogin", "/principal/ServletLogin"}) /*Mapeamento de URL que vem da tela*/
+@WebServlet(urlPatterns = {"/principal/ServletLogin", "/ServletLogin"}) /*Mapeamento de URL que vem da tela*/
 public class ServletLogin extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -40,8 +40,8 @@ public class ServletLogin extends HttpServlet {
 			modelLogin.setLogin(login);
 			modelLogin.setSenha(senha);
 						
-			if (modelLogin.getLogin().equals("admin") 
-					&& modelLogin.getSenha().equals("admin")) {/*Deu certo o login*/
+			if (modelLogin.getLogin().equalsIgnoreCase("admin") 
+					&& modelLogin.getSenha().equalsIgnoreCase("admin")) {/*Deu certo o login*/
 				
 				//Atributo de Sessão, manter o usuário logado no sistema
 				request.getSession().setAttribute("usuario", modelLogin.getLogin());
